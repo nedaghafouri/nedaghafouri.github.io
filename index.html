@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neda Ghafouri</title>
+<meta name="description" content="Neda Ghafouri, Ph.D. student in Industrial Engineering at the University of Central Florida. I build medical AI systems and audit whether they can be trusted: clinical LLM agents, evidence use in medical vision–language models, and temporal models with domain priors.">
+<meta property="og:title" content="Neda Ghafouri">
+<meta property="og:description" content="Ph.D. student at UCF. Building and auditing medical AI: clinical LLM agents, evidence use in medical VLMs, temporal models.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1c1c1d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c1c1d'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='14' font-weight='700' text-anchor='middle' fill='%233bb0d6'%3ENG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;
+--bg:#1c1c1d;--bg2:#232325;--line:#38383c;
+--ink:#e4e6ea;--text:#c9cdd3;--muted:#8e939b;
+--theme:#3bb0d6;--theme-bg:#1f6f8b;
+--font:"Roboto",system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:68px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 var(--font);overflow-x:clip}
+a{color:var(--theme);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--theme);outline-offset:2px;border-radius:4px}
+b,strong{color:var(--ink);font-weight:500}
+img{max-width:100%}
+.container{max-width:880px;margin:0 auto;padding:0 20px}
+
+/* navbar */
+.navbar{position:sticky;top:0;z-index:10;background:rgba(28,28,29,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.navbar .container{display:flex;align-items:center;gap:16px;min-height:54px}
+.brand{color:var(--ink);font-size:17px;font-weight:300;white-space:nowrap}
+.brand b{font-weight:700}
+.brand:hover{text-decoration:none}
+.nav{display:flex;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:none;display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--text);font-size:14.5px}
+.nav a:hover{color:var(--theme);text-decoration:none}
+.nav a.on{color:var(--theme)}
+
+/* about */
+.about{padding-top:40px}
+h1{margin:0;color:var(--ink);font-size:36px;font-weight:300;line-height:1.15;letter-spacing:-.01em}
+h1 b{font-weight:700}
+.desc{margin:6px 0 0;color:var(--muted);font-size:14px}
+.profile{float:right;width:176px;margin:0 0 16px 28px;text-align:center}
+.profile img{display:block;width:160px;height:160px;margin:0 auto;border-radius:50%;object-fit:cover;object-position:50% 30%;border:1px solid var(--line)}
+.profile p{margin:10px 0 0;font-size:13px;line-height:1.5;color:var(--muted)}
+.bio{margin-top:22px}
+.bio p{margin:0 0 12px}
+.badge-in{display:inline-block;padding:0 6px;margin:0 1px;border-radius:3px;background:var(--bg2);border:1px solid var(--line);color:var(--theme);font-size:12px;font-weight:500;line-height:1.6;white-space:nowrap;vertical-align:1px}
+a.badge-in:hover{text-decoration:none;border-color:var(--theme)}
+.open{margin:14px 0 0;color:var(--muted);font-size:14px}
+.social{clear:both;display:flex;flex-wrap:wrap;gap:6px 18px;padding:16px 0 0}
+.social a{display:inline-flex;align-items:center;gap:7px;min-height:36px;color:var(--text);font-size:14px}
+.social a:hover{color:var(--theme);text-decoration:none}
+.social svg{width:17px;height:17px;color:var(--theme)}
+
+/* sections */
+section.block{padding-top:36px}
+h2{margin:0 0 12px;color:var(--ink);font-size:22px;font-weight:400}
+h3.sub{margin:22px 0 8px;color:var(--muted);font-size:14px;font-weight:500}
+
+/* news */
+.news{width:100%;border-collapse:collapse}
+.news td{padding:7px 0;vertical-align:top;font-size:14.5px;border-bottom:1px solid var(--line)}
+.news tr:last-child td{border-bottom:0}
+.news td.d{width:110px;padding-right:16px;color:var(--ink);font-weight:500;font-size:13.5px;white-space:nowrap}
+
+/* publications */
+.bib{list-style:none;margin:0;padding:0}
+.bib>li{display:grid;grid-template-columns:170px minmax(0,1fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.bib>li:last-child{border-bottom:0}
+.abbr{display:block;width:100%;padding:2px 6px;border-radius:3px;background:var(--theme-bg);color:#fff;font-size:12px;font-weight:500;text-align:center;line-height:1.6}
+.abbr.alt{background:#4a4a50}
+.prev{display:block;position:relative;margin-top:8px;padding:4px;background:#fff;border-radius:4px;cursor:zoom-in;border:1px solid transparent}
+.prev:hover{border-color:var(--theme)}
+.prev img{display:block;width:100%;height:auto;max-height:150px;object-fit:contain}
+.title{color:var(--ink);font-size:15.5px;font-weight:500;line-height:1.4}
+.author{margin-top:3px;font-size:14px;color:var(--muted)}
+.author b{text-decoration:underline;text-underline-offset:2px}
+.periodical{margin-top:2px;font-size:14px;font-style:italic;color:var(--text)}
+.status{font-style:normal;color:var(--theme);font-size:13px}
+.hl{margin:6px 0 0;font-size:14px;color:var(--text)}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.links a,.links button{display:inline-flex;align-items:center;min-height:28px;padding:0 9px;border:1px solid var(--line);border-radius:3px;background:transparent;color:var(--text);font:500 11.5px/1 var(--font);letter-spacing:.03em;text-transform:uppercase;cursor:pointer}
+.links a:hover,.links button:hover,.links button[aria-expanded=true]{border-color:var(--theme);color:var(--theme);text-decoration:none}
+.abstract{margin-top:10px;padding:10px 12px;border:1px solid var(--line);border-radius:4px;background:var(--bg2);font-size:14px}
+.abstract[hidden]{display:none}
+
+/* experience and education */
+.cv{list-style:none;margin:0;padding:0}
+.cv li{display:grid;grid-template-columns:170px minmax(0,1fr);gap:20px;padding:10px 0;border-bottom:1px solid var(--line)}
+.cv li:last-child{border-bottom:0}
+.cv .when{align-self:start;display:block;padding:2px 6px;border-radius:3px;background:var(--bg2);border:1px solid var(--line);color:var(--ink);font-size:12.5px;text-align:center;white-space:nowrap}
+.cv .what{font-size:14.5px}
+.cv .what span{display:block;color:var(--muted);font-size:13.5px}
+.skills{margin:0;font-size:14px}
+.skills div{display:grid;grid-template-columns:170px minmax(0,1fr);gap:20px;padding:6px 0}
+.skills dt{color:var(--muted)}
+.skills dd{margin:0}
+
+/* free time */
+.free{border:1px solid var(--line);border-radius:6px;background:var(--bg2);padding:14px 16px}
+.free p{margin:0;font-size:14.5px;color:var(--text)}
+
+footer{margin-top:48px;border-top:1px solid var(--line)}
+footer .container{padding-top:16px;padding-bottom:28px;color:var(--muted);font-size:13px;text-align:center}
+
+/* figure viewer */
+#lb{width:min(1400px,96vw);max-width:96vw;max-height:94vh;padding:0;border:1px solid var(--line);border-radius:8px;background:#fff;overflow:auto}
+#lb::backdrop{background:rgba(0,0,0,.82)}
+.lb-bar{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 6px 6px 14px;background:var(--bg2);color:var(--ink);border-bottom:1px solid var(--line);font-size:13.5px}
+#lb-x{flex:none;min-height:36px;padding:0 14px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);font:inherit;cursor:pointer}
+#lb-img{display:block;width:100%;height:auto;padding:12px}
+
+@media (max-width:680px){
+.brand{display:none}
+.nav{margin-left:-10px}
+.about{padding-top:28px}
+.profile{float:none;width:auto;margin:0 0 18px;display:flex;align-items:center;gap:16px;text-align:left}
+.profile img{width:112px;height:112px;margin:0}
+.profile p{margin:0}
+h1{font-size:30px}
+.bib>li,.cv li,.skills div{grid-template-columns:minmax(0,1fr);gap:8px}
+.bib .side{max-width:320px}
+.cv .when{justify-self:start}
+.news td.d{width:84px;padding-right:10px}
+}
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a class="brand" href="#about">Neda <b>Ghafouri</b></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">about</a>
+      <a href="#news">news</a>
+      <a href="#publications">publications</a>
+      <a href="#experience">experience</a>
+      <a href="#education">education</a>
+      <a href="files/Neda_Ghafouri_CV.pdf">cv</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="about">
+    <h1>Neda <b>Ghafouri</b></h1>
+    <p class="desc">Ph.D. student in Industrial Engineering, University of Central Florida</p>
+
+    <div class="bio">
+      <div class="profile">
+        <img src="assets/neda-photo.jpg" alt="Portrait of Neda Ghafouri" width="160" height="160">
+        <p>Orlando, Florida<br>neda.ghafouri@ucf.edu</p>
+      </div>
+      <p>My path into AI wasn't a straight line. I started out in civil engineering and spent several years working in structural design. Then I came to UCF for a master's in Data Analytics, and that's where the world of AI really pulled me in. By the time I finished, I knew it was what I wanted to keep exploring, so I stayed at UCF to pursue my Ph.D. in it.</p>
+      <p>Today I build AI systems and test whether they reach the right answer for the right reasons.</p>
+      <p class="open">If you're working on something related, I'd love to hear from you. I'm open to research internships and collaborations, and email is the best way to reach me.</p>
+    </div>
+
+    <div class="social">
+      <a href="mailto:neda.ghafouri@ucf.edu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>Email</a>
+      <a href="files/Neda_Ghafouri_CV.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>CV</a>
+      <a href="https://github.com/nedaghafouri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>GitHub</a>
+      <a href="https://www.linkedin.com/in/nedaghafouri/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7M3 12.5h18"/></svg>LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- ================= NEWS (newest first; copy one <tr> to add an item) ================= -->
+  <section class="block" id="news">
+    <h2>Recent news</h2>
+    <table class="news">
+      <tr><td class="d">Dec 2026</td><td>Poster at the WiML Workshop @ NeurIPS 2026: <a href="#p-wiml">Confabulation Instead of Abstention</a>.</td></tr>
+      <tr><td class="d">Nov 2026</td><td>My paper <a href="#p-judges">Can LLM Judges Catch Unsafe Clinical Actions? A Fault-Injection Study</a> is now on <a href="https://arxiv.org/abs/2611.33012">arXiv</a>.</td></tr>
+      <tr><td class="d">Nov 2026</td><td>Served as a reviewer for the <a href="https://appliedmachinelearning-lab.github.io/wllfm2026/">Fourth Workshop on Large Language and Foundation Models (WLLFM 2026)</a> at IEEE BigData 2026.</td></tr>
+      <tr><td class="d">Fall 2026</td><td>Two papers at MICCAI 2026 workshops: <a href="#p-medagent">anxiety-reducing conversational agents for breast cancer care</a> (MedAgent, first author) and <a href="#p-mri">longitudinal breast MRI for treatment response</a> (AMAI).</td></tr>
+      <tr><td class="d">Fall 2025</td><td>Started as a Graduate Research Assistant at UCF.</td></tr>
+      <tr><td class="d">Jan 2025</td><td>Began my Ph.D. in Industrial Engineering at UCF.</td></tr>
+      <tr><td class="d">Dec 2024</td><td>Completed my M.Sc. in Data Analytics at UCF with a thesis on forecasting research trends with LLMs.</td></tr>
+    </table>
+  </section>
+
+  <!-- ================= PUBLICATIONS (figures in assets/figures; click a figure to enlarge; ABS shows the summary) ================= -->
+  <section class="block" id="publications">
+    <h2>Publications</h2>
+    <ol class="bib">
+
+      <li id="p-judges">
+        <div class="side">
+          <span class="abbr">arXiv</span>
+          <a class="prev" href="assets/figures/judges-pipeline.webp" data-cap="Can LLM Judges Catch Unsafe Clinical Actions? End-to-end pipeline (paper Fig. 3)"><img src="assets/figures/judges-pipeline.webp" alt="Pipeline: collect, verify, inject, judge, analyze" loading="lazy" width="2000" height="713"></a>
+        </div>
+        <div>
+          <div class="title">Can LLM Judges Catch Unsafe Clinical Actions? A Fault-Injection Study</div>
+          <div class="author"><b>Neda Ghafouri</b></div>
+          <div class="periodical">arXiv:2611.33012, 2026 <span class="status">· submitted to the BioAgents Workshop at IEEE BigData 2026</span></div>
+          <p class="hl">Paired discrimination rises from <b>0 to 0.75</b> when judges see the full trajectory instead of only the final answer.</p>
+          <div class="links">
+            <button type="button" aria-expanded="false" aria-controls="abs-judges">Abs</button>
+            <a href="https://arxiv.org/abs/2611.33012">arXiv</a>
+            <a href="https://arxiv.org/pdf/2611.33012">PDF</a>
+          </div>
+          <div class="abstract" id="abs-judges" hidden>Clinical AI agents now act inside electronic health records, and LLM judges increasingly decide whether those actions were safe. This study injects one known clinical error (8 types, such as the wrong patient, a 10× dose or a skipped lab check) into verified MedAgentBench runs, then pairs each faulty run with its correct original so six open-weight judges get credit only for flags the error itself causes: 416 faulty trajectories and 32,112 verdicts. Real EHR responses add 0.39 in discrimination; the benchmark's own grader passed all 38 runs with a skipped lab check, while judges plus a rule-based checker caught 97% of faults.</div>
+        </div>
+      </li>
+
+      <li id="p-medagent">
+        <div class="side">
+          <span class="abbr">MICCAI</span>
+          <a class="prev" href="assets/figures/medagent-pipeline.webp" data-cap="Toward Anxiety-Reducing Conversational AI Agents for Breast Cancer Care: dialogue generation, matched multi-agent evaluation, anxiety outcome assessment"><img src="assets/figures/medagent-pipeline.webp" alt="Pipeline: dialogue generation, matched evaluation of base and adapted doctor models, condition-blind anxiety scoring" loading="lazy" width="1672" height="941"></a>
+        </div>
+        <div>
+          <div class="title">Toward Anxiety-Reducing Conversational AI Agents for Breast Cancer Care</div>
+          <div class="author"><b>Neda Ghafouri</b>, Jane S. Gibson, Chaithanya Renduchintala, Yu Tian, Aritra Dutta, Amrit Singh Bedi</div>
+          <div class="periodical">MICCAI 2026 Workshop on Agentic AI for Medicine (MedAgent), Springer LNCS 17263</div>
+          <p class="hl">The adapted agent left <b>109 vs 77</b> matched patients calmer than its base model.</p>
+          <div class="links">
+            <button type="button" aria-expanded="false" aria-controls="abs-medagent">Abs</button>
+            <a href="https://papers.miccai.org/miccai-2026-sat/MedAgent_045.html">Paper</a>
+            <a href="https://papers.miccai.org/miccai-2026-sat/paper/MedAgent_045.pdf">PDF</a>
+            <a href="https://openreview.net/forum?id=D7U6UAmOV8">OpenReview</a>
+            <a href="https://link.springer.com/book/9783032437372">Springer</a>
+          </div>
+          <div class="abstract" id="abs-medagent" hidden>LLM agents turn 35 public patient narratives into 275 time-ordered, evidence-constrained support sessions, which then LoRA-adapt a Qwen3-8B doctor agent. Adapted and base agents meet the same simulated patients over six rounds, scored by a blinded observer on a HADS-A-inspired anxiety rubric. 96.8% of generated sessions passed grounding and safety checks.</div>
+        </div>
+      </li>
+
+      <li id="p-mri">
+        <div class="side">
+          <span class="abbr">MICCAI</span>
+          <a class="prev" href="assets/figures/mri.webp" data-cap="Longitudinal 3D Foundation Modeling for Neoadjuvant Breast Cancer Response Prediction: architecture"><img src="assets/figures/mri.webp" alt="Architecture: Pillar-0 encoder over four DCE-MRI visits, transformer encoder, tabular prior and residual fusion" loading="lazy" width="1480" height="831"></a>
+        </div>
+        <div>
+          <div class="title">Longitudinal 3D Foundation Modeling for Neoadjuvant Breast Cancer Response Prediction from Serial DCE-MRI</div>
+          <div class="author">Fidel Omar Tito Cruz, <b>Neda Ghafouri</b>, Zengyan Wang, Pegah Khosravi, Yu Tian, Chen Chen</div>
+          <div class="periodical">MICCAI 2026 Workshop on Applications of Medical AI (AMAI), Springer LNCS 17273</div>
+          <p class="hl"><b>73.6%</b> test AUROC, against 68.8% from clinical data alone.</p>
+          <div class="links">
+            <button type="button" aria-expanded="false" aria-controls="abs-mri">Abs</button>
+            <a href="https://papers.miccai.org/miccai-2026-sat/AMAI_012.html">Paper</a>
+            <a href="https://papers.miccai.org/miccai-2026-sat/paper/AMAI_012.pdf">PDF</a>
+            <a href="https://arxiv.org/abs/2608.09991">arXiv</a>
+            <a href="https://github.com/omarftt/longitudinal_temporal_pillar">Code</a>
+            <a href="https://link.springer.com/book/9783032439727">Springer</a>
+          </div>
+          <div class="abstract" id="abs-mri" hidden>A frozen 3D foundation encoder (Pillar-0) embeds each DCE-MRI visit during chemotherapy, and a Temporal Dynamics Network attends across visits and clinical data to predict pathologic complete response. 982 patients from I-SPY2 and ACRIN-6698; 71.9% AUROC already by mid-treatment.</div>
+        </div>
+      </li>
+
+      <li id="p-wiml">
+        <div class="side">
+          <span class="abbr">WiML</span>
+        </div>
+        <div>
+          <div class="title">Confabulation Instead of Abstention: How Medical Vision–Language Models Respond to Missing Visual Evidence</div>
+          <div class="author"><b>Neda Ghafouri</b></div>
+          <div class="periodical">Women in Machine Learning Workshop at NeurIPS 2026 <span class="status">· accepted poster</span></div>
+          <p class="hl">What does a medical VLM do when the evidence a diagnosis depends on is no longer in the image?</p>
+          <div class="links">
+            <button type="button" aria-expanded="false" aria-controls="abs-wiml">Abs</button>
+            <a href="https://github.com/nedaghafouri/medvlm-faithfulness">Code</a>
+          </div>
+          <div class="abstract" id="abs-wiml" hidden>This study removes the diagnostically decisive region of medical images, using expert segmentation masks, and asks whether the model notices and says it cannot tell, or confabulates a confident answer anyway. The aim is a simple, reproducible test of whether medical VLMs actually rely on the visual evidence they are given.</div>
+        </div>
+      </li>
+
+      <li id="p-nodule">
+        <div class="side">
+          <span class="abbr alt">Under review</span>
+          <a class="prev" href="assets/figures/nodule.webp" data-cap="Looking Is Not Reading: study design"><img src="assets/figures/nodule.webp" alt="Same-scan CT diagnosis, a probe at every language-model layer, and targeted repairs" loading="lazy" width="950" height="832"></a>
+        </div>
+        <div>
+          <div class="title">Looking Is Not Reading: How Medical Vision–Language Models Lose the Nodule on the Way to the Answer</div>
+          <div class="author"><b>Neda Ghafouri</b> et al.</div>
+          <div class="periodical"><span class="status">Under review</span></div>
+          <p class="hl"><b>6 of 9</b> VLMs keep the nodule in their internal layers yet use far less of it in the answer.</p>
+          <div class="links">
+            <button type="button" aria-expanded="false" aria-controls="abs-nodule">Abs</button>
+          </div>
+          <div class="abstract" id="abs-nodule" hidden>Same-scan CT slices from LIDC-IDRI (with the nodule, 5–10 mm away, and far away), probes at every decoder layer, and targeted repairs from prompting and decoder LoRA to a light spatial reader on frozen visual tokens; 939 pairs across 9 VLMs. MedGemma keeps the nodule decodable through all 34 layers, yet its answer uses far less of it; a frozen-token reader raised same-scan pair wins from 76% to 86% on the development set.</div>
+        </div>
+      </li>
+
+      <li id="p-airport">
+        <div class="side">
+          <span class="abbr">MDPI</span>
+          <a class="prev" href="assets/figures/airport-terminal.webp" data-cap="The Schedule Is the Signal: simulated terminal layout"><img src="assets/figures/airport-terminal.webp" alt="Simulated terminal: check-in, two security checkpoints, people mover and four airside concourses with 24 gates" loading="lazy" width="1678" height="937"></a>
+        </div>
+        <div>
+          <div class="title">The Schedule Is the Signal: Forecasting Airport Terminal Passenger Flows with Known-Future Flight Information</div>
+          <div class="author"><b>Neda Ghafouri</b>, Kalp D. Thakkar</div>
+          <div class="periodical">Future Transportation <span class="status">· second-round review</span></div>
+          <p class="hl">Conditioning on the known-future flight schedule lowers forecast error by <b>44–60%</b>.</p>
+          <div class="links">
+            <button type="button" aria-expanded="false" aria-controls="abs-airport">Abs</button>
+            <a href="https://github.com/nedaghafouri/airport-passenger-flow">Code</a>
+          </div>
+          <div class="abstract" id="abs-airport" hidden>A discrete-event simulator of a 32-node terminal inspired by Orlando International Airport (1.2M simulated passengers) feeds known-future schedule covariates to graph, temporal and Chronos-2 models, including the Temporal Dynamics Network adapted from the MRI work. Schedule conditioning also gives 38% lower error than fine-tuned Chronos-2.</div>
+        </div>
+      </li>
+
+      <li id="p-medseq">
+        <div class="side">
+          <span class="abbr">AI Open</span>
+          <a class="prev" href="assets/figures/medseq.webp" data-cap="MedSeq: THINK and NO-THINK modes with sequence-level optimization (GSPO)"><img src="assets/figures/medseq.webp" alt="MedSeq: Qwen2.5-VL-3B in THINK and NO-THINK modes, reward parsing, sequence-level optimization" loading="lazy" width="1532" height="737"></a>
+        </div>
+        <div>
+          <div class="title">MedSeq: Improving Accuracy and Robustness in Medical Foundation Models</div>
+          <div class="author">I. Alqurashi, S. Khan, C. Gonzalez, <b>N. Ghafouri</b>, A. Alsowaigh, M. Alsulami, A. Chadha, K. Ibrahim, R. Qureshi</div>
+          <div class="periodical">AI Open <span class="status">· under review</span></div>
+          <p class="hl"><b>74.7%</b> cross-modality accuracy on OmniMedVQA, above Med-R1.</p>
+          <div class="links">
+            <button type="button" aria-expanded="false" aria-controls="abs-medseq">Abs</button>
+          </div>
+          <div class="abstract" id="abs-medseq" hidden>Sequence-level policy optimization (GSPO) with domain-aware rewards, in reasoning and direct-answer modes, trains Qwen2.5-VL-3B for medical visual question answering; transfer is tested on OmniMedVQA across 8 imaging modalities and 5 question types, 44 points above Med-Flamingo.</div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="block" id="experience">
+    <h2>Experience</h2>
+    <ul class="cv">
+      <li><span class="when">2023 – present</span><div class="what">Research Assistant, University of Central Florida<span>Graduate Research Assistant since Fall 2025: clinical LLM agents, medical vision–language models, temporal forecasting</span></div></li>
+      <li><span class="when">Summer 2025</span><div class="what">Graduate Teaching Assistant, Geotechnical Lab<span>University of Central Florida, lab instructor</span></div></li>
+      <li><span class="when">Spring 2025</span><div class="what">Graduate Teaching Assistant, Applied Numerical Methods for Civil Engineering<span>University of Central Florida</span></div></li>
+      <li><span class="when">2016 – 2022</span><div class="what">Civil engineer, structural design<span>Saze Sazan Afra Pars Amin, Iran</span></div></li>
+      <li><span class="when">2017 – 2018</span><div class="what">Mathematics instructor<span>Preparing students for Iran's university entrance exam, Tehran</span></div></li>
+      <li><span class="when">2016</span><div class="what">Teaching Assistant, General Mathematics 1 and 2<span>Pooyesh Institute of Higher Education, Qom, Iran</span></div></li>
+    </ul>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section class="block" id="education">
+    <h2>Education</h2>
+    <ul class="cv">
+      <li><span class="when">2025 – present</span><div class="what">Ph.D., Industrial Engineering<span>University of Central Florida</span></div></li>
+      <li><span class="when">2023 – 2024</span><div class="what">M.Sc., Data Analytics<span>University of Central Florida</span></div></li>
+      <li><span class="when">2014 – 2017</span><div class="what">B.Sc., Civil Engineering<span>Pooyesh Institute of Higher Education, Qom, Iran</span></div></li>
+    </ul>
+    <h3 class="sub">Skills</h3>
+    <dl class="skills">
+      <div><dt>Languages</dt><dd>Python, Julia, R, SQL, MATLAB</dd></div>
+      <div><dt>Machine learning</dt><dd>PyTorch, TensorFlow and Keras, scikit-learn, NumPy, pandas, LangChain</dd></div>
+      <div><dt>LLMs and VLMs</dt><dd>LoRA fine-tuning, multi-agent pipelines, LLM-as-a-judge evaluation, layer-wise probing</dd></div>
+      <div><dt>Computing</dt><dd>AWS, GCP, Snowflake, SLURM clusters, Tableau, Power BI</dd></div>
+    </dl>
+  </section>
+
+  <!-- ================= ON MY FREE TIME ================= -->
+  <section class="block" id="life">
+    <h2>On my free time</h2>
+    <div class="free">
+      <p>When I'm not working, you'll usually find me painting (mostly drawing and watercolor), tending my garden, or spending time in nature. I also love movies, and <a href="https://www.imdb.com/title/tt0816692/"><i>Interstellar</i></a> is my forever favorite.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">© 2026 Neda Ghafouri. Last updated November 2026.</div>
+</footer>
+
+<dialog id="lb" aria-label="Figure">
+  <div class="lb-bar"><span id="lb-cap"></span><button type="button" id="lb-x">Close</button></div>
+  <img id="lb-img" alt="">
+</dialog>
+
+<script>
+{
+  /* highlight the current section in the menu */
+  const links = [...document.querySelectorAll('.nav a[href^="#"]')];
+  const byId = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const spy = new IntersectionObserver(entries => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      links.forEach(a => a.classList.remove('on'));
+      const a = byId.get(e.target.id);
+      if (a) a.classList.add('on');
+    }
+  }, { rootMargin: '-35% 0px -55% 0px' });
+  document.querySelectorAll('main section[id]').forEach(s => spy.observe(s));
+
+  /* ABS buttons show and hide each paper's summary */
+  document.querySelectorAll('.links button[aria-controls]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const box = document.getElementById(btn.getAttribute('aria-controls'));
+      if (!box) return;
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      box.hidden = open;
+    });
+  });
+
+  /* click a figure to enlarge it */
+  const lb = document.getElementById('lb');
+  const lbImg = document.getElementById('lb-img');
+  const lbCap = document.getElementById('lb-cap');
+  if (lb && typeof lb.showModal === 'function') {
+    document.querySelectorAll('a.prev').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        lbImg.src = a.getAttribute('href');
+        lbImg.alt = a.querySelector('img')?.alt || '';
+        lbCap.textContent = a.dataset.cap || '';
+        try { lb.showModal(); } catch (err) { window.location.href = a.href; }
+      });
+    });
+    document.getElementById('lb-x').addEventListener('click', () => lb.close());
+    lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+  }
+}
+</script>
+</body>
+</html>
