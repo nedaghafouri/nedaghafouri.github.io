@@ -24,4 +24,5 @@ Everything is in `index.html`. Search for the comment markers:
 - **Research areas**: the bulleted list in the about section links each paper by its `#p-...` id.
 - **Experience and education**: copy one `<li>` in the matching list; the date goes in the `when` badge.
 - **CV**: replace `files/Neda_Ghafouri_CV.pdf` with a new file of the same name.
+- **Color themes**: visitors pick White (the default), Light or Dark from the sun/moon button in the top bar, and their browser remembers the choice. The colors are the CSS variables at the top of `index.html`: `:root` is White, `:root[data-theme="light"]` and `:root[data-theme="dark"]` override it.
 - Change "Last updated" in the footer when you edit.
